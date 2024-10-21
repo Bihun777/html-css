@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 0.9fr 2fr 0.15fr;
+}
+
+.titleDiv {
+    display: flex; 
+}
+
+.title {
+    color: #fff;
+    display: flex;
+    margin: 0px 0px 0px 80px;
+    height: 100px;
+    align-items: center;
+    font-size: 28px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.centerMenu {
+    color: #fff;
+    height: 100px;
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+input[id="menuIcon"] {
+display: none; 
+}
+
+input[id="menuIcon"] + label {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+input[id="menuIcon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 30px;
+    background: #fff;
+    transition:all .35s;
+    z-index: 2;
+}
+input[id="menuIcon"] + label span:nth-child(1) {
+    top: 0;
+}
+input[id="menuIcon"] + label span:nth-child(2) {
+    top: 50%;
+    transform:translateY(-50%);
+}
+input[id="menuIcon"] + label span:nth-child(3) {
+    bottom: 0;  
+}
+input[id="menuIcon"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuIcon"]:checked + label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuIcon"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+div[class="sidebar"] {
+    width: 280px;
+    height: 100%;
+    background: #0046ff;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 0;
+    transition:all .35s;
+}
+input[id="menuIcon"]:checked + label + div {
+    right: 0; 
+}
+
+.undertext {
+    position: fixed;
+    left: 50px;
+    text-shadow: black 0.5px 0.5px
+}
+
+.mt {
+display: flex;
+align-items: flex-end;
+color: #fff;
+height: 555px;
+margin: 5px 0px;
+font-size: 50px;
+}
+
+.sub {
+    display: flex;
+align-items: flex-end;
+color: #fff;
+font-size: 23px;
+}
+
+.menu1:hover {
+    color: #0046ff;
+}
+.menu2:hover {
+    color: #0046ff;
+}
+.menu3:hover {
+    color: #0046ff;
+}
+.menu4:hover {
+    color: #0046ff;
+}
+.menu5:hover {
+    color: #0046ff;
+}
